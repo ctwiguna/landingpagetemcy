@@ -118,12 +118,12 @@
         <p class="eyebrow reveal">📍 Tembalang, Semarang · sebelah UNDIP</p>
 
         <p class="promo-badge reveal" role="note">
-          <span class="promo-badge-main">PROMO MABA 🎉 DISKON 50%</span>
+          <span class="promo-badge-main">PROMO MABA <span class="emoji" aria-hidden="true">🎉</span> DISKON 50%</span>
           <span class="promo-badge-sub">CUKUP 10RB UDAH BISA NYUCI</span>
           <span class="promo-badge-fine">*berlaku s/d 31 Agustus 2026 · tunjukkan KTM/bukti maba</span>
         </p>
 
-        <h1 class="reveal">Laundry Tembalang Self Service — Nyuci Sat-Set, Nunggu Adem</h1>
+        <h1 class="reveal" id="hero-title">Laundry Tembalang Self Service — Nyuci Sat-Set, Nunggu Adem</h1>
         <p class="hero-sub reveal">Ruang ber-AC, WiFi kenceng, colokan di mana-mana. Nyuci sambil ngerjain tugas? Bisa banget.</p>
 
         <div class="cta-row reveal">
@@ -142,9 +142,9 @@
         </div>
 
         <ul class="trust-chips reveal" aria-label="Keunggulan singkat">
-          <li>⭐ 5.0 · 140+ ulasan</li>
-          <li>❄️ Full AC</li>
-          <li>📶 WiFi kenceng</li>
+          <li><span class="emoji" aria-hidden="true">⭐</span> 5.0 · 140+ ulasan</li>
+          <li><span class="emoji" aria-hidden="true">❄️</span> Full AC</li>
+          <li><span class="emoji" aria-hidden="true">📶</span> WiFi kenceng</li>
         </ul>
       </div>
 
@@ -206,19 +206,19 @@
 
       <div class="card-grid">
         <article class="card reveal">
-          <div class="card-emoji" aria-hidden="true">🫧</div>
+          <div class="card-emoji" aria-hidden="true"><span class="emoji emoji-bubble">🫧</span></div>
           <h3>Self Service</h3>
           <p>Nyuci sendiri sambil nonton Netflix — cuma sejam kelar, tinggal bawa pulang. Paling hemat, apalagi pas promo maba: <strong>cuma 10rb</strong>.</p>
           <span class="card-chip">Paling laris 🔥</span>
         </article>
         <article class="card reveal">
-          <div class="card-emoji" aria-hidden="true">🧺</div>
+          <div class="card-emoji" aria-hidden="true"><span class="emoji emoji-basket">🧺</span></div>
           <h3>Cuci Kering Lipat</h3>
           <p>Drop, tinggal, ambil udah rapi. Cocok buat minggu-minggu deadline yang nggak bisa diganggu.</p>
           <span class="card-chip">Tinggal beres ✨</span>
         </article>
         <article class="card reveal">
-          <div class="card-emoji" aria-hidden="true">👔</div>
+          <div class="card-emoji" aria-hidden="true"><span class="emoji emoji-shirt">👔</span></div>
           <h3>Cuci Kering Setrika</h3>
           <p>Buat yang mau tampil licin maksimal — kemeja praktikum, dress seminar, sampai outfit date.</p>
           <span class="card-chip">Licin maksimal 😎</span>
@@ -273,7 +273,7 @@
     <section class="section" id="lokasi">
       <div class="location-card reveal">
         <p class="section-tag tag-amber">Lokasi</p>
-        <h2>Kos-mu di Tembalang? Berarti Kita Tetanggaan. Mampir ✌️</h2>
+        <h2>Kos-mu di Tembalang? Berarti Kita Tetanggaan. Mampir <span class="emoji emoji-peace" aria-hidden="true">✌️</span></h2>
 
         <address class="address">
           <svg class="ic ic-teal" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
@@ -316,6 +316,12 @@
     <p class="footer-copy">© Temcy Laundry 2026. Dibuat dengan 🧺 di Tembalang.</p>
   </footer>
 
+  <!-- Overlay gelembung: diisi JS, dekoratif murni -->
+  <div class="bubbles" aria-hidden="true"></div>
+
+  <!-- GSAP self-hosted (bukan CDN) -> CSP script-src 'self' tetap ketat -->
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>
