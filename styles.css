@@ -216,7 +216,7 @@ h3 { font-size: 1.3rem; margin-bottom: 8px; }
   box-shadow: 8px 8px 0 var(--teal);
   width: 100%;
   object-fit: cover;
-  aspect-ratio: 800 / 1021;
+  aspect-ratio: 1200 / 675;
   background: var(--teal-soft);
 }
 .sticker {
