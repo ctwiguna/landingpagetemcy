@@ -31,7 +31,7 @@
     try {
       var url = new URL(a.href);
       url.searchParams.set("utm_source", "landing");
-      url.searchParams.set("utm_campaign", "maba2026");
+      url.searchParams.set("utm_campaign", "loyalty2026");
       a.href = url.toString();
     } catch (e) { /* biarkan href asli */ }
   });
@@ -44,43 +44,7 @@
     }
   } catch (e) { /* storage bisa dimatikan user — abaikan */ }
 
-  /* ---------- 4. Countdown promo -> 31 Agustus 2026 23:59:59 WIB ---------- */
-  var PROMO_END = new Date("2026-08-31T23:59:59+07:00").getTime();
-  var cd = {
-    days: document.querySelector('[data-cd="days"]'),
-    hours: document.querySelector('[data-cd="hours"]'),
-    mins: document.querySelector('[data-cd="mins"]'),
-    secs: document.querySelector('[data-cd="secs"]')
-  };
-  function pad(n) { return String(n).padStart(2, "0"); }
-  function setNum(el, val) {
-    if (el && el.textContent !== val) el.textContent = val;
-  }
-  function tick() {
-    var diff = PROMO_END - Date.now();
-    if (diff <= 0) {
-      var wrap = document.getElementById("countdown");
-      if (wrap) {
-        wrap.textContent = "";
-        var p = document.createElement("p");
-        p.className = "cd-fallback";
-        p.textContent = "Promo maba sudah berakhir — tapi harga normal tetap ramah kantong. Mampir ya!";
-        wrap.appendChild(p);
-      }
-      window.clearInterval(timer);
-      return;
-    }
-    var s = Math.floor(diff / 1000);
-    setNum(cd.days, String(Math.floor(s / 86400)));
-    setNum(cd.hours, pad(Math.floor((s % 86400) / 3600)));
-    setNum(cd.mins, pad(Math.floor((s % 3600) / 60)));
-    setNum(cd.secs, pad(s % 60));
-  }
-  var timer = null;
-  if (cd.days || cd.hours || cd.mins || cd.secs) {
-    tick();
-    timer = window.setInterval(tick, 1000);
-  }
+  /* ---------- 4. (dihapus) Countdown promo MABA ---------- */
 
   /* ---------- 5. Smooth scroll anchor internal ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
@@ -221,16 +185,6 @@
       card.addEventListener("pointerleave", function () {
         g.to(card, { y: 0, rotate: 0, duration: 0.45, ease: "elastic.out(1, 0.5)" });
       });
-    });
-
-    /* --- 7g. Countdown: angka flip setiap berubah --- */
-    ["days", "hours", "mins", "secs"].forEach(function (k) {
-      var el = cd[k];
-      if (!el) return;
-      var obs = new MutationObserver(function () {
-        g.fromTo(el, { y: -10, opacity: 0.2 }, { y: 0, opacity: 1, duration: 0.35, ease: "back.out(2)" });
-      });
-      obs.observe(el, { childList: true });
     });
 
     /* --- 7h. Grid foto: pop bertahap + parallax ringan --- */

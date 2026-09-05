@@ -322,6 +322,29 @@ h3 { font-size: 1.3rem; margin-bottom: 8px; }
 }
 .promo-note { font-size: .95rem; margin-bottom: 22px; }
 
+/* ---------- Galeri loyalty (gambar promo) ---------- */
+.loyalty-gallery { text-align: left; }
+.loyalty-imgs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 6px;
+}
+.loyalty-fig {
+  margin: 0;
+  border: var(--border);
+  border-radius: calc(var(--radius) + 4px);
+  box-shadow: 5px 5px 0 var(--amber);
+  overflow: hidden;
+  background: var(--white);
+}
+.loyalty-fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .countdown { margin-bottom: 24px; }
 .cd-label {
   font-family: var(--font-display);
@@ -560,6 +583,7 @@ h3 { font-size: 1.3rem; margin-bottom: 8px; }
   .photo-grid { grid-template-columns: 1fr 1fr; }
   .photo-grid img:first-child { grid-column: 1 / -1; }
   .proof-wrap { grid-template-columns: repeat(2, 1fr); }
+  .loyalty-imgs { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 900px) {
   .hero { grid-template-columns: 1.05fr .95fr; }
