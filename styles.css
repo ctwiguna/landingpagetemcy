@@ -344,6 +344,15 @@ h3 { font-size: 1.3rem; margin-bottom: 8px; }
   height: auto;
   object-fit: contain;
 }
+.loyalty-fig--single {
+  margin: 0 auto;
+  max-width: 680px;
+}
+.loyalty-fig--single img {
+  width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
+}
 
 .countdown { margin-bottom: 24px; }
 .cd-label {
